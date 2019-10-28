@@ -29,7 +29,7 @@ while (ch[i])
 _putchar(ch[i]);
 i++;
 }
-return (i - 1);
+return (i);
 }
 
 /**
@@ -37,10 +37,9 @@ return (i - 1);
 * @obj: the list of arguments.
 * Return: +1 character.
 */
-int printPercent(va_list obj)
+int printPercent(__attribute__((unused))va_list obj)
 {
 _putchar('%');
-va_arg(obj, int);
 return (1);
 }
 

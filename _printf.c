@@ -27,7 +27,10 @@ if (format[i] == '%')
 while (arr[j].types)
 {
 if (*(arr[j].types) == format[i + 1])
+{
 n += arr[j].printType(obj);
+break;
+}
 j++;
 }
 i++;

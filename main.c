@@ -41,6 +41,13 @@ int main(void)
     // _printf("Unknown:[%r]\n");
     // printf("Unknown:[%r]\n");
 
-    _printf("%%\n");
+    int i = _printf("%s%s%s", "aqsd", "bfdg", "csq");
+    printf("\n%d\n",i);
+
+    printf("\n======================\n\n");
+
+    int j = printf("%s%s%s", "aqsd", "bfdg", "csq");
+    printf("\n%d\n",j);
+
     return (0);
 }
