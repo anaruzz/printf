@@ -10,12 +10,8 @@ int _printf(const char *format, ...)
 {
 int i = 0, j, n = 0, v = 0;
 va_list obj;
-typeToPrint arr[] = {
-{"c", printChar},
-{"s", printString},
-{"%", printPercent},
-{NULL, NULL},
-};
+typeToPrint arr[] = {{"c", printChar}, {"s", printString}, {"%", printPercent},
+{NULL, NULL},};
 if (format == NULL)
 return (-1);
 va_start(obj, format);
@@ -30,7 +26,6 @@ if (*(arr[j].types) == format[i + 1])
 {
 n += arr[j].printType(obj);
 v = 1;
-break;
 }
 j++;
 }
