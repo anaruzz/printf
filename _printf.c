@@ -16,7 +16,7 @@ typeToPrint arr[] = {
 {"%", printPercent},
 {NULL, NULL},
 };
-if (!format)
+if (format == NULL)
 return (-1);
 va_start(obj, format);
 while (format && format[i])
