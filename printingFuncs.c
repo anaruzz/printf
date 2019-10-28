@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdio.h>
 #include "holberton.h"
 
 /*Printing functions definition:*/
@@ -10,7 +11,7 @@
 */
 int printChar(va_list obj)
 {
-_putchar(va_arg(obj, char));
+_putchar(va_arg(obj, int));
 return (1);
 }
 
@@ -38,6 +39,7 @@ return (i - 1);
 int printPercent(va_list obj)
 {
 _putchar('%');
+va_arg(obj, int);
 return (1);
 }
 
