@@ -8,7 +8,7 @@
 */
 int _printf(const char *format, ...)
 {
-int i = 0, j, n = 0;
+int i = 0, j, n = 0, v = 0;
 va_list obj;
 typeToPrint arr[] = {
 {"c", printChar},
@@ -16,7 +16,7 @@ typeToPrint arr[] = {
 {"%", printPercent},
 {NULL, NULL},
 };
-if (!format)
+if (format == NULL)
 return (-1);
 va_start(obj, format);
 while (format && format[i])
@@ -29,10 +29,13 @@ while (arr[j].types)
 if (*(arr[j].types) == format[i + 1])
 {
 n += arr[j].printType(obj);
+v = 1;
 break;
 }
 j++;
 }
+if (v == 0)
+return (-1);
 i++;
 }
 else
