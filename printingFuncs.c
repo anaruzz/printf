@@ -25,7 +25,7 @@ int printString(va_list obj)
 char *ch = va_arg(obj, char *);
 int i = 0;
 char *null = "(null)";
-if (ch != NULL)
+if (ch == NULL)
 {
 for (i = 0; null[i]; i++)
 _putchar(null[i]);
