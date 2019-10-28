@@ -24,7 +24,8 @@ int printString(va_list obj)
 {
 char *ch = va_arg(obj, char *);
 int i = 0;
-while (ch[i]) {
+while (ch[i])
+{
 _putchar(ch[i]);
 i++;
 }
