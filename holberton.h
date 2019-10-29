@@ -26,6 +26,10 @@ int printString(va_list);
 int printPercent(va_list);
 int printInteger(va_list);
 int printBinary(va_list obj);
+int printUnsign(va_list obj);
+int printOctal(va_list obj);
+int printHexL(va_list obj);
+int printHexU(va_list obj);
 
 /*===============================*/
 
