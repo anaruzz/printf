@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -7,7 +8,14 @@
  */
 int main(void)
 {
-    int i = _printf("%X\n", 140);
-    _printf("%d\n", i);
+    int a = 10;
+    int *p;
+    p = &a;
+
+    int b = _printf("%p\n", p);
+    _printf("%d\n", b);
+
+    int j = printf("%p\n", p);
+    printf("%d\n", j);
     return (0);
 }
