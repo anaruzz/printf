@@ -25,6 +25,7 @@ int printChar(va_list);
 int printString(va_list);
 int printPercent(va_list);
 int printInteger(va_list);
+int printBinary(va_list obj);
 
 /*===============================*/
 

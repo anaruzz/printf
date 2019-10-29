@@ -54,7 +54,7 @@ return (1);
 
 
 /**
- * print_number - print a number.
+ * printInteger- print a number.
  * @n: the number to print
  * Return: Always 0.
  */
@@ -95,4 +95,36 @@ int a = n % 10;
   	}
   	return (x);
 }
+/*===============================*/
+
+/**
+ * printBinary - convert and print an unsigned int to binary.
+ * @n: the number to print
+ * Return: Always 0.
+ */
+ int printBinary(va_list obj)
+ {
+   unsigned int n;
+   unsigned int bin[64];
+   int c = 0, i;
+   n = va_arg(obj, int);
+   if (n < 2)
+   {
+     _putchar(n + '0');
+     c++;
+   }
+   else
+   {
+     for (i = 0; n != 0; i++)
+     {
+       bin[i] = n % 2;
+       n /= 2;
+       c++;
+     }
+     i--;
+     for (; i >= 0; i--)
+     _putchar(bin[i] + '0');
+   }
+   return (c);
+ }
 /*===============================*/
