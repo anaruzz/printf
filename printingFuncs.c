@@ -287,7 +287,6 @@ void print_hexa(unsigned int n)
   if (n < 10)
   {
     _putchar(n + '0');
-
   }
   else
   {
@@ -319,31 +318,31 @@ void print_hexa(unsigned int n)
 int printString_S(va_list obj)
 {
 char *ch = va_arg(obj, char *);
-int i = 0;
+int i = 0, n = 0;
 char *null = "(null)";
 if (ch == NULL)
 {
 for (i = 0; null[i]; i++)
 _putchar(null[i]);
+return (i + 1);
 }
-
-else
-{
 while (ch[i])
 {
-  if ((ch[i] > 0 && ch[i] < 32) || ch[i] >= 127)
+  if ((ch[i] >= 0 && ch[i] < 32) || ch[i] >= 127)
   {
   _putchar('\\');
   _putchar('x');
-  print_hexa(ch[i]);
+  n = ch[i];
+  if (n <= 15)
+  _putchar('0');
+  print_hexa(n);
   i++;
   }
   else
   {
-_putchar(ch[i]);
-i++;
-}
-}
+    _putchar(ch[i]);
+    i++;
+  }
 }
 return (i);
 }
