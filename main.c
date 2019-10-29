@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -7,7 +8,8 @@
  */
 int main(void)
 {
-     _printf("%S\n", "\0Holberton\nSchool");
+     _printf("%S\n", "Holberton\0School");
+     printf("%S\n", "Holberton\0School");
 
     return (0);
 }

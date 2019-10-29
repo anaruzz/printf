@@ -199,9 +199,9 @@ int a = n % 10;
 /*===============================*/
 
 /**
- * printOctal - convert and print an unsigned int to binary.
- * @n: the number to print
- * Return: Always 0.
+ * printHexL - convert and print an unsigned int to hexadecimal - Lower case
+ * @obj: the number to print
+ * Return: +number of characters printed
  */
  int printHexL(va_list obj)
  {
@@ -240,6 +240,11 @@ int a = n % 10;
  }
 /*===============================*/
 
+/**
+ * printHexU - convert and print an unsigned int to hexadecimal- Upper case
+ * @obj: the number to print
+ * Return: +number of characters printed
+ */
 int printHexU(va_list obj)
 {
   unsigned int n;
@@ -283,7 +288,7 @@ void print_hexa(unsigned int n)
   unsigned char hexc[] = {'A', 'B', 'C', 'D', 'E', 'F'};
   unsigned int tenc[] = {10, 11, 12, 13, 14, 15};
   int i, j;
-
+_putchar('0');
   if (n < 10)
   {
     _putchar(n + '0');
@@ -318,32 +323,32 @@ void print_hexa(unsigned int n)
 */
 int printString_S(va_list obj)
 {
-char *ch = va_arg(obj, char *);
-int i = 0;
-char *null = "(null)";
-if (ch == NULL)
-{
-for (i = 0; null[i]; i++)
-_putchar(null[i]);
-}
-
-else
-{
-while (ch[i])
-{
-  if ((ch[i] > 0 && ch[i] < 32) || ch[i] >= 127)
+  char *ch = va_arg(obj, char *);
+  int i = 0;
+  char *null = "(null)";
+  if (ch == NULL)
   {
-  _putchar('\\');
-  _putchar('x');
-  print_hexa(ch[i]);
-  i++;
+    for (i = 0; null[i]; i++)
+    _putchar(null[i]);
   }
   else
   {
-_putchar(ch[i]);
-i++;
-}
-}
-}
-return (i);
+    while (ch[i])
+    {
+      if ((ch[i] > 0 && ch[i] < 32) || ch[i] >= 127)
+      {
+        _putchar('\\');
+        _putchar('x');
+
+        print_hexa(ch[i]);
+        i++;
+      }
+      else
+      {
+        _putchar(ch[i]);
+        i++;
+      }
+    }
+  }
+  return (i);
 }
