@@ -11,7 +11,9 @@ int _printf(const char *format, ...)
 int i = 0, j, n = 0, v = 0;
 va_list obj;
 typeToPrint arr[] = {{"c", printChar}, {"s", printString}, {"%", printPercent},
-{"i", printInteger}, {"d", printInteger}, {NULL, NULL},};
+{"i", printInteger}, {"d", printInteger}, {"b", printBinary},
+{"u", printUnsign}, {"o", printOctal}, {"x", printHexL},
+{"X", printHexU}, {"S", printString}, {NULL, NULL},};
 if (format == NULL)
 return (-1);
 va_start(obj, format);
