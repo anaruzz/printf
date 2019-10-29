@@ -52,4 +52,47 @@ _putchar('%');
 return (1);
 }
 
+
+/**
+ * print_number - print a number.
+ * @n: the number to print
+ * Return: Always 0.
+ */
+int printInteger(va_list obj)
+{
+int div = 1, x = 0;
+int n = va_arg(obj, int);
+int a = n % 10;
+
+  	n = n / 10;
+
+  	if (a < 0 || n < 0)
+  	{
+  		n *= -1;
+  		a *= -1;
+  		_putchar('-');
+  		x++;
+  	}
+  	if (n == 0)
+  	{
+  		x++;
+  		_putchar(a + '0');
+  	}
+  	else if (n > 9)
+  	{
+  		while (n / div >= 10)
+  		{
+  			div *= 10;
+  		}
+  		for (; div >= 1; div /= 10)
+  		{
+  			_putchar((n / div) + '0');
+  			x++;
+  			n = n % div;
+  		}
+  		_putchar(a + '0');
+  		x++;
+  	}
+  	return (x);
+}
 /*===============================*/
