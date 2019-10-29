@@ -31,6 +31,7 @@ int printOctal(va_list obj);
 int printHexL(va_list obj);
 int printHexU(va_list obj);
 int printString_S(va_list obj);
+int printPointer(va_list obj);
 /*===============================*/
 
 /*Main function:*/

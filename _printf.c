@@ -13,7 +13,7 @@ va_list obj;
 typeToPrint arr[] = {{"c", printChar}, {"s", printString}, {"%", printPercent},
 {"i", printInteger}, {"d", printInteger}, {"b", printBinary},
 {"u", printUnsign}, {"o", printOctal}, {"x", printHexL},
-{"X", printHexU}, {"S", printString_S}, {NULL, NULL},};
+{"X", printHexU}, {"S", printString_S}, {"p", printPointer}, {NULL, NULL},};
 if (format == NULL)
 return (-1);
 va_start(obj, format);
