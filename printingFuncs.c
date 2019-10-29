@@ -319,12 +319,12 @@ int printString_S(va_list obj)
 {
 char *ch = va_arg(obj, char *);
 int i = 0, n = 0, c = 0;
-char *null = "(nul";
+char *null = "(null)";
 if (ch == NULL)
 {
 for (i = 0; null[i]; i++)
 _putchar(null[i]);
-return (i + 1);
+return (i);
 }
 while (ch[i])
 {
