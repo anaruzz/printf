@@ -318,7 +318,7 @@ void print_hexa(unsigned int n)
 int printString_S(va_list obj)
 {
 char *ch = va_arg(obj, char *);
-int i = 0, n = 0;
+int i = 0, n = 0, c = 0;
 char *null = "(null)";
 if (ch == NULL)
 {
@@ -334,7 +334,10 @@ while (ch[i])
   _putchar('x');
   n = ch[i];
   if (n <= 15)
+  {
   _putchar('0');
+  c += 4;
+  }
   print_hexa(n);
   i++;
   }
@@ -342,7 +345,8 @@ while (ch[i])
   {
     _putchar(ch[i]);
     i++;
+    c++;
   }
 }
-return (i);
+return (c);
 }
