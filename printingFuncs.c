@@ -360,7 +360,7 @@ int printPointer(va_list obj)
   unsigned int tenc[] = {10, 11, 12, 13, 14, 15};
   char *null = "(nil)";
   int c = 0, i, j;
-  n = (long)va_arg(obj, void *);
+  n = va_arg(obj, long);
   if (n == 0)
   {
     for (i = 0; null[i]; i++)
