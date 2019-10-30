@@ -292,7 +292,6 @@ _putchar('0');
   if (n < 10)
   {
     _putchar(n + '0');
-
   }
   else
   {
@@ -323,6 +322,7 @@ _putchar('0');
 */
 int printString_S(va_list obj)
 {
+<<<<<<< HEAD
   char *ch = va_arg(obj, char *);
   int i = 0;
   char *null = "(null)";
@@ -351,4 +351,38 @@ int printString_S(va_list obj)
     }
   }
   return (i);
+=======
+char *ch = va_arg(obj, char *);
+int i = 0, n = 0, c = 0;
+char *null = "(null)";
+if (ch == NULL)
+{
+for (i = 0; null[i]; i++)
+_putchar(null[i]);
+return (i);
+}
+while (ch[i])
+{
+  if ((ch[i] >= 0 && ch[i] < 32) || ch[i] >= 127)
+  {
+  _putchar('\\');
+  _putchar('x');
+  n = ch[i];
+  if (n <= 15)
+  {
+  _putchar('0');
+  c += 4;
+  }
+  print_hexa(n);
+  i++;
+  }
+  else
+  {
+    _putchar(ch[i]);
+    i++;
+    c++;
+  }
+}
+return (c);
+>>>>>>> 632798355b1c78f70082dfffbead19ec79cde05c
 }
