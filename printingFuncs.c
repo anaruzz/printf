@@ -332,12 +332,11 @@ while (ch[i])
   {
   _putchar('\\');
   _putchar('x');
-  c += 2;
   n = ch[i];
   if (n <= 15)
   {
   _putchar('0');
-  c++;
+  c += 4;
   }
   print_hexa(n);
   i++;
