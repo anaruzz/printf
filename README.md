@@ -12,13 +12,15 @@ git clone git@github.com:anaruzz/printf.git
 ```bash
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ```
-##Usage
+
+## Usage
 * Include holberton.h
 * Call the function _ printf passing optional arguments.
 * Use format specifiers for desired output.
 * The function returns -1 if an error occurs.
 
-#Example Usage
+
+# Example Usage
 * _ printf("Hello, world\n") prints "Hello, world" followed by a new line
 * _ printf("%d\n", 5) printf the decimal number, 5 followed by a new line
 * _ printf("%c", 'a') prints the character 'a'
