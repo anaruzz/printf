@@ -19,7 +19,7 @@ int (*printType)(va_list);
 } typeToPrint;
 
 /*===============================*/
-
+int spec(int j, const char *format, int i, va_list obj);
 /*Printing functions:*/
 int printChar(va_list);
 int printString(va_list);
