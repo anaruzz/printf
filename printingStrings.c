@@ -11,9 +11,6 @@
 */
 int printChar(va_list obj)
 {
-  if (!obj)
-  return (0);
-
 _putchar(va_arg(obj, int));
 return (1);
 }
@@ -27,16 +24,20 @@ int printString(va_list obj)
 {
 char *ch = va_arg(obj, char *);
 int i = 0;
-
+char *null = "(null)";
 if (ch == NULL)
-ch = "(null)";
-
+{
+for (i = 0; null[i]; i++)
+_putchar(null[i]);
+}
+else
+{
 while (ch[i])
 {
 _putchar(ch[i]);
 i++;
 }
-
+}
 return (i);
 }
 
@@ -91,10 +92,14 @@ char *ch = va_arg(obj, char *);
 int i = 0, n = 0, c = 0;
 char *null = "(null)";
 if (ch == NULL)
-ch = "(null)";
+{
+for (i = 0; null[i]; i++)
+_putchar(null[i]);
+return (i);
+}
 while (ch[i])
 {
-if ((ch[i] > 0 && ch[i] < 32) || (ch[i] >= 127))
+if ((ch[i] >= 0 && ch[i] < 32) || ch[i] >= 127)
 {
 _putchar('\\');
 _putchar('x');
