@@ -105,12 +105,11 @@ _putchar('\\');
 _putchar('x');
 n = ch[i];
 if (n <= 15)
-{
 _putchar('0');
-c += 4;
-}
+
 print_hexa(n);
 i++;
+c += 4;
 }
 else
 {
