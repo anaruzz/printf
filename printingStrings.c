@@ -99,7 +99,7 @@ return (i);
 }
 while (ch[i])
 {
-if ((ch[i] >= 0 && ch[i] < 32) || ch[i] >= 127)
+if ((ch[i] > 0 && ch[i] < 32) || ch[i] >= 127)
 {
 _putchar('\\');
 _putchar('x');
