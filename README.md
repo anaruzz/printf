@@ -26,5 +26,4 @@ $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 * _ printf("%c", 'a') prints the character 'a'
 
 ## Authors
-Ghofrane Abidi
-Atef Mechken
+Ghofrane Abidi - Atef Mechken
